@@ -1,0 +1,101 @@
+{
+  "id": "pikmin-side-root",
+  "type": "row",
+  "titlebar": "none",
+  "theme": "graphite",
+  "font_size": 13,
+  "ui_font": "Geist",
+  "background": "#4e7a2c",
+  "colors": {
+    "background": "#1f2a1c",
+    "accent": "#f2c230",
+    "border": "#4e7a2c"
+  },
+  "terminal_padding": [
+    10,
+    12
+  ],
+  "resizable": false,
+  "children": [
+    {
+      "id": "pikmin-side-left",
+      "type": "column",
+      "size": {
+        "weight": 1
+      },
+      "children": [
+        {
+          "id": "pikmin-side-floor",
+          "type": "block",
+          "size": {
+            "weight": 1
+          },
+          "window_drag": true,
+          "content": {
+            "mod": "pikmin",
+            "props": {
+              "grid": 4,
+              "lead": "hypervisor",
+              "scale": 1.15,
+              "scroll": true
+            }
+          }
+        },
+        {
+          "id": "pikmin-side-rail",
+          "type": "block",
+          "size": {
+            "px": 28
+          },
+          "content": {
+            "mod": "pikmin",
+            "props": {
+              "role": "rail",
+              "scale": 1.15
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "pikmin-side-desks",
+      "type": "block",
+      "size": {
+        "weight": 1
+      },
+      "padding": [
+        10,
+        10
+      ],
+      "background": "#4e7a2c",
+      "content": {
+        "tab": "active",
+        "pane": {
+          "gap": 10,
+          "radius": 0,
+          "lone": true,
+          "background": "#1f2a1c",
+          "border": {
+            "width": 4,
+            "color": "#3a5a22"
+          },
+          "focus": {
+            "width": 4,
+            "color": "#f2c230"
+          },
+          "header": {
+            "content": {
+              "mod": "pikmin",
+              "props": {
+                "role": "pane"
+              }
+            },
+            "height": 26,
+            "position": "top",
+            "reveal": "always"
+          }
+        }
+      }
+    }
+  ]
+}
